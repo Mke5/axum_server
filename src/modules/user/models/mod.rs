@@ -61,6 +61,7 @@ pub struct RegisterRequest {
     pub display_name: Option<String>,
 }
 
+#[derive(Debug, Deserialize, Validate)]
 pub struct LoginRequest {
     #[validate(email(message = "Must be a valid email address"))]
     pub email: String,
